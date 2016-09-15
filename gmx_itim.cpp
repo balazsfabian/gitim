@@ -11,7 +11,6 @@
  * Copyright (c) 1991-2000, University of Groningen, The Netherlands.
  * Copyright (c) 2001-2004, The GROMACS development team,
  * check out http://www.gromacs.org for more information.
-
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 2
@@ -3233,7 +3232,7 @@ void calc_intrinsic_density(const char *fn, Flags myflags, atom_id **index, int 
 //          gmx_fatal(FARGS,"Could not read coordinates from statusfile\n");
 #ifdef VIRIAL_EXTENSION
 	flags = TRX_NEED_X ;
-	if(dens_opt=='t') flags |= TRX_READ_V |  TRX_READ_F ;
+	flags |= TRX_READ_V |  TRX_READ_F ;
 #else
 	flags = TRX_NEED_X ;
 #endif
